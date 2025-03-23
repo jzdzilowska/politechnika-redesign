@@ -22,13 +22,16 @@
             </ul>
         </nav>
         <div class="search-lang">
-            <input type="text" placeholder="Search">
+          <div class="search-container">
+            <img src="assets/search.png" alt="Search" class="search-icon">
+            <input type="text" class="search-input">
+        </div>
             <a href="#">ENG</a>
         </div>
     </header>
 
     <section class="hero">
-        <img src="hero-image.jpg" alt="Campus">
+        <img src="assets/header.jpg" alt="Campus">
         <div class="tagline">Rooted in tradition. <br> Driven by innovation.</div>
     </section>
 
@@ -88,5 +91,15 @@
             <button>Contact Me</button>
         </div>
     </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 80) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
 </body>
 </html>

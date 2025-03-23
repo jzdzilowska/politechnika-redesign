@@ -1,17 +1,39 @@
+
+@font-face {
+  font-family: 'Helvetica Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Light'), url('fonts/helvetica/helvetica-light-587ebe5a59211.woff') format('woff');
+  }
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Light', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #f0f0f0;
 }
 
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 20px 30px 20px 30px;
   background-color: white;
+  transition: background 0.9s ease;
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent when scrolled */
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect */
 }
 
 .logo {
@@ -27,10 +49,51 @@ header {
   width: auto; 
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  width: 24px; 
+  height: 24px;
+  margin-right:10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-container:hover .search-input {
+  width: 150px;
+  padding: 10px;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  transition: width 0.3s ease, padding 0.3s ease;
+  background: white;
+  border-bottom: 1px solid black;
+  height: 14px;
+  position: absolute;
+  right: 0;
+  color: gray;
+}
+
+.search-lang a {
+  font-size: 13px;
+  text-decoration: none;
+  padding:10px;
+  background-color: black;
+  color: white;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 70px;
 }
 
 nav ul li {
@@ -42,9 +105,12 @@ nav ul li a {
   color: black;
 }
 
+nav ul li a:hover{
+  font-style: italic;
+}
+
 .search-lang {
   display: flex;
-  gap: 10px;
 }
 
 .hero {
@@ -53,14 +119,17 @@ nav ul li a {
 
 .hero img {
   width: 100%;
-  height: 400px;
+  height: 450px;
   object-fit: cover;
+  border-radius: 10px 10px 20px 20px;
 }
 
 .tagline {
   position: absolute;
-  top: 50%;
-  right: 20px;
+  top: 0;
+  right: 10%;
+  width: 140px;
+  height: 170px;
   background: white;
   padding: 10px;
   font-size: 1.5em;
