@@ -48,13 +48,15 @@ header {
   align-items: center;
   padding: 20px 30px 20px 30px;
   background-color: white;
-  transition: background 0.9s ease;
+  transition: background 2s ease;
 }
 
+/*
 header.scrolled {
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent when scrolled */
-  backdrop-filter: blur(10px); /* Optional: adds a blur effect */
+  background: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(10px); 
 }
+  */
 
 .logo {
   display: flex;
@@ -181,7 +183,7 @@ h2 {
 }
 
 .departments {
-  padding: 0px 80px; 
+  padding: 0px 100px; 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -193,11 +195,16 @@ h2 {
   padding: 2px 0px;
   margin-block: 0; 
   border-bottom: 0.2px solid rgb(135, 135, 135);
+  transition: ease-in-out 0.6s;
+  z-index: 1000;
 }
 
 .departments h3:hover {
   background-color: black;
+  padding: 2px 20px;
   color: white;
+  text-align: left;
+  border-bottom: none;
 }
 
 .department-list {
@@ -207,19 +214,38 @@ h2 {
 }
 
 .subcategories {
+  display: none;
+  align-items: right;
+  justify-items: right;
+  justify-content: right;
+  margin-bottom: 0px;
+  z-index: -2; 
+}
+
+.subcategories li { 
+  padding: 5px 10px; 
+  border-bottom: 0.1px solid rgb(52, 52, 52);
+  width: 60%;
+  text-align: left;
+  font-family:'Helvetica Light', sans-serif;
+  font-style:italic;
+}
+
+.department:hover > .subcategories {
+  margin-top: -26px;
+  display: block;
   background-color: black;
   color: white;
   list-style: none;
-  display: none; 
+  text-decoration: none;
 }
 
-.subcategories li {
-  padding: 8px 12px;
-  transition: background-color 0.2s;
-}
-
-.subcategories li:hover {
-  background-color: darkgray;
+.departments .department:hover h3 {
+  background-color: black;
+  padding: 2px 20px;
+  color: white;
+  text-align: left;
+  border-bottom: none;
 }
 
 .explore-grid {
