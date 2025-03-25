@@ -171,14 +171,15 @@ nav ul li a:hover{
 h2 {
   font-family: 'Helvetica', sans-serif;
   letter-spacing: -1px;
-  font-size: 2.3em;
+  font-size: 32px;
   font-style: bold;
   margin-left: 7%;
   margin-bottom: 0; 
+  line-height: 30px; 
 }
 
 .divider {
-  border-bottom: 0.2px solid rgb(135, 135, 135);
+  border-bottom: 0.2px solid rgb(207, 207, 207);
   width: 100%;
   margin-block: 0; 
 }
