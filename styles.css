@@ -344,7 +344,6 @@ h2 {
 }
 
 .small-article:hover {
-  z-index: 1000;
   background: black; 
   color: white; 
 }
@@ -377,11 +376,40 @@ h2 {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content:left;
   background: black;
   color: white;
-  padding: 20px;
+  height: 220px; 
+  margin: 0;
+  padding-left: 20px; 
+  grid-gap: 0; 
+  padding-top: 20px; 
+  padding-right: 40px; 
+}
+
+footer h3 { 
+  font-family: 'Helvetica', sans-serif;
+  font-size: 50px;
+  letter-spacing:-2px;
+  padding: 0; 
+  margin: 0;
+}
+
+footer p {
+  color: rgb(167, 167, 167); 
+  font-family: 'Helvetica Light', sans-serif;
+  font-size: 14px; 
+  margin-left: -70px; 
+}
+
+.contact-form {
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Helvetica Light', sans-serif;
+  font-style: italic;
 }
 
 .contact-form input {
@@ -389,11 +417,21 @@ footer {
   margin-bottom: 10px;
   padding: 5px;
   width: 200px;
+  background-color: transparent;
+  border: none; 
+  border-bottom: 0.1px solid rgb(118, 118, 118);
+  line-height: 10px; 
+  box-shadow: none;
+  width: 100%; 
 }
 
 button {
+  align-self: flex-start;
   background: white;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+  border-radius: 10px; 
+  color: black; 
+  width: 50%; 
 }
