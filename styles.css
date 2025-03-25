@@ -173,7 +173,7 @@ h2 {
   letter-spacing: -1px;
   font-size: 2.3em;
   font-style: bold;
-  margin-left: 4%;
+  margin-left: 7%;
   margin-bottom: 0; 
 }
 
@@ -252,7 +252,7 @@ h2 {
 
 .explore-grid {
   margin-top: 15px; 
-  padding: 0px 100px; 
+  padding: 0px 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 cols */
   grid-template-rows: auto auto; /* 2 rows */
@@ -282,11 +282,9 @@ h2 {
 }
 
 .explore-item {
-  font-family: 'Helvetica Bold Oblique', sans-serif;
-  padding: 10px; 
-  font-size: 20px;
-  text-align: center;
-  align-content: center;
+  font-family: 'Helvetica Light', sans-serif;
+  font-style: italic;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 10px;
   object-fit: cover;
@@ -294,23 +292,34 @@ h2 {
   background-size: cover;
   background-position: center;
   transition: all 0.3s;
+  position: relative;
 }
 
 .explore-item h3 {
+  margin: 0; 
   background-color: white; 
-  width: auto;
+  padding: 20px 20px; 
+  width: 20%;
+  height: 8%;
   color: black;
+  position: absolute;
+  right: 0; 
+  top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 0px 0px;
 }
+
 .explore-item:hover{
   filter: drop-shadow(0 0 10px rgb(77, 77, 77));
   scale: 1.02;
 }
 
-.recent {
-  padding: 50px;
-}
 
 .recent-grid {
+  padding: 0px 100px; 
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 10px;
