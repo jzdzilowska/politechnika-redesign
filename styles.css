@@ -420,18 +420,23 @@ footer p {
   background-color: transparent;
   border: none; 
   border-bottom: 0.1px solid rgb(118, 118, 118);
-  line-height: 10px; 
   box-shadow: none;
   width: 100%; 
+  font-style: italic;
 }
 
+.contact-form h4{ 
+  margin-bottom: 10px;
+}
 button {
   align-self: flex-start;
   background: white;
   border: none;
-  padding: 5px 10px;
+  padding: 10px 20px;
   cursor: pointer;
-  border-radius: 10px; 
+  border-radius: 30px; 
   color: black; 
-  width: 50%; 
+  width: 35%; 
+  margin-top: 24px; 
+  margin-left: -10px;
 }
