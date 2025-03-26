@@ -478,6 +478,10 @@ button:hover {
     padding: 20px; /* Reduced padding for mobile */
     position: relative; /* Needed for absolute positioning of menu */
   }
+
+  .hero img {
+    border-radius: 0; 
+  }
   
   nav {
     display: none; /* Hide navbar by default */
