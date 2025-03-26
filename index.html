@@ -23,10 +23,13 @@
         </nav>
         <div class="search-lang">
           <div class="search-container">
-            <img src="assets/search.png" alt="Search" class="search-icon">
-            <input type="text" class="search-input">
+                <input type="text" class="search-input">
+                <img src="assets/search.png" alt="Search" class="search-icon">
+           </div>
+        <div id="menu-toggle" class="hamburger">
+            &#9776;
         </div>
-            <a href="#">ENG</a>
+        <a href="#">ENG</a>
         </div>
     </header>
 
@@ -50,7 +53,7 @@
                 </ul>
             </div>
             <div class="department">
-                <h3>Information Technology Sciences</h3>
+                <h3>IT Sciences</h3>
                 <ul class="subcategories">
                     <li>Computer Science</li>
                     <li>Information Systems</li>
@@ -158,6 +161,15 @@
           header.classList.remove("scrolled");
         }
       });
-    </script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector("nav");
+        
+        menuToggle.addEventListener("click", function() {
+            console.log("clicked");
+            nav.classList.toggle("active");
+        });
+    });
+</script>
 </body>
 </html>

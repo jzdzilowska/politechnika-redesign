@@ -113,6 +113,17 @@ header.scrolled {
   color: white;
 }
 
+nav {
+  display: flex;
+}
+
+/* Hide hamburger menu on large screens */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -401,7 +412,6 @@ footer p {
   color: rgb(167, 167, 167); 
   font-family: 'Helvetica Light', sans-serif;
   font-size: 14px; 
-  margin-left: -70px; 
 }
 
 .contact-form {
@@ -459,4 +469,138 @@ button {
 
 button:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+/* Mobile Styles */
+@media (max-width: 992px) {
+  header {
+    justify-content: space-between;
+    padding: 20px; /* Reduced padding for mobile */
+    position: relative; /* Needed for absolute positioning of menu */
+  }
+  
+  nav {
+    display: none; /* Hide navbar by default */
+    position: absolute;
+    top: 100%; /* Position below header */
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+  }
+
+  /* Show menu when active */
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack items vertically */
+    gap: 0; /* Remove gap between items */
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .search-lang {
+    align-items: center;
+    gap: 15px;
+  }
+
+  .search-lang a {
+    display: none; /* Hide language toggle on mobile */
+  }
+
+  .search-input {
+    right: 35px; 
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+    order: 1; /* Ensure it's at the end */
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(2, 1fr);  /* Single row */
+    height: auto; /* Remove fixed height */
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  /* Reset all grid item positions */
+  .explore-item.left,
+  .explore-item.middle-top,
+  .explore-item.middle-bottom,
+  .explore-item.right {
+    grid-column: auto;
+    grid-row: auto;
+    height: 200px; /* Uniform height */
+  }
+
+  .explore-item h3 {
+    width: 30%; /* Smaller title box on mobile */
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto auto auto; /* 3 rows */
+    padding: 20px; /* Padding on all sides */
+    text-align: center; /* Center align text */
+    height: auto;
+  }
+
+  footer h3 {
+    font-size: 40px; /* Smaller heading */
+  }
+
+  footer p {
+    margin-left: 0; /* Reset margin */
+  }
+
+  footer .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align form */
+    justify-content: center;
+    width: 80%;
+  }
+
+  footer .contact-form input {
+    width: 100%; /* Full width input */
+  }
+
+  footer .contact-form button {
+    width: 100%; /* Full width button */
+    margin: 0px;
+    margin-top: 15px;
+  }
+
+  .departments {
+    padding: 0 20px; /* Reduced padding */
+  }
+
+  .departments h3 {
+    border: none; 
+    text-align: center;
+  }
+  .department-list {
+    width: 100%;
+  }
 }
