@@ -368,9 +368,10 @@ h2 {
 .small-article h3 {
   margin-bottom: 0px;
 }
+
 .small-article p { 
   text-align: justify;
-  font-size: 13px; 
+  font-size: 70%; 
 }
 .recent {
   position: relative; 
