@@ -559,6 +559,16 @@ button:hover {
     width: 30%; /* Smaller title box on mobile */
   }
 
+  .small-article {
+    width: 30vw; /* Full width */
+    padding: 10px; 
+  }
+
+  .small-article img {
+    height: 100px; /* Fixed height */
+    width: 100%; 
+  }
+
   footer {
     display: flex;
     flex-direction: column;
