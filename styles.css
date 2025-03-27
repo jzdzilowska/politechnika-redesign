@@ -477,7 +477,7 @@ button:hover {
   header {
     justify-content: space-between;
     padding: 20px; /* Reduced padding for mobile */
-    position: relative; /* Needed for absolute positioning of menu */
+    position: sticky; /* Needed for absolute positioning of menu */
   }
 
   .hero img {
